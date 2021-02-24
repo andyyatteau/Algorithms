@@ -32,9 +32,13 @@ namespace Algorithms
             }
 
             int swaps = 0;
-            switch (args[0]) {
+            string algorithm = args[0];
+            switch (algorithm) {
                 case "bubble-sort":
-                    swaps = Sorts.BubbleSort(ref nums);
+                    swaps = BubbleSort.Sort(nums);
+                    break;
+                case "mergesort":
+                    MergeSort.Sort(nums, 0, nums.Length - 1);
                     break;
                 default:
                     Console.WriteLine("Algorithm not implemented yet.");
@@ -45,8 +49,10 @@ namespace Algorithms
             for (int i = 0; i < nums.Length; i++) {
                 Console.Write($"{nums[i]} ");
             }
-            Console.WriteLine();
-            Console.WriteLine($"List is sorted in {swaps} swaps.");
+            if(algorithm == "bubble-sort") {
+                Console.WriteLine();
+                Console.WriteLine($"List is sorted in {swaps} swaps.");
+            }
 
             return 0;
         }
