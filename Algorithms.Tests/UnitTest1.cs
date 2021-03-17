@@ -28,5 +28,13 @@ namespace Algorithms.Tests
             int[] arr = { 1, 3, 5, 6, 8, 11, 15, 20 };
             Assert.IsTrue(Search.BinarySearch(target, arr));
         }
+
+        [TestMethod]
+        public void BinarySearchTest4()
+        {
+            int target = 0;
+            int[] arr = { 1, 3, 5, 6, 8, 11, 15, 20 };
+            Assert.IsFalse(Search.BinarySearch(target, arr));
+        }
     }
 }
