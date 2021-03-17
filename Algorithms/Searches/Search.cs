@@ -4,6 +4,7 @@ namespace Algorithms
 {
     public static class Search
     {
+        // Time complexity is O(log(n))
         public static bool BinarySearch (int target, int[] arr) {
             int floorIndex = -1;
             int ceilingIndex = arr.Length;
